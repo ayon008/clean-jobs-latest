@@ -2,32 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.text-secondary {
+    color: #0F3141 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.text-primary {
+    color: #246532 !important;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.bg-primary {
+    background-color: #246532 !important;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.inter {
+    font-family: var(--font-inter) !important;
 }
+
+.nunito {
+    font-family: var(--font-nunito) !important;
+}
+
+.poppins {
+    font-family: var(--font-poppins) !important;
+}
+
+.banner {
+    background: url('../../public/assets/fc8401c42aac2193aa4293ac4cb98056\ \(1\).jpg') lightgray 50% / cover no-repeat;
+}
+
+.text-secondary {
+    color: #0F3141 !important;
+}
+
+.login {
+    background-image: url('../../public//assets/Untitled.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.disabled-link {
+    pointer-events: none !important;
+}
+
+#search::placeholder {
+    color: #667085 !important;
+    font-family: var(--font-inter) !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+}
+
+.message {
+    grid-template-columns: 1fr 3fr !important;
+}
+
+.navbar a:focus,
+.navbar a:active,
+.navbar a:visited {
+    outline: none !important;
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+
+.custom-file-input::-webkit-file-upload-button {
+    background-color: #246532;
+    /* Change to your desired color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 3fr 1fr !important;
+    gap: 10px !important;
+    align-items: center !important;
+}
+
+.subscription {
+    background-image: url('../../public/assets/d52f550b3b5989cf96d343f41333a3ab.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .text-white {
+    color: white !important;
+} */
+
+.contact {
+    background: linear-gradient(281deg, #7F57F1 0%, #C0A9FF 135.48%);
+}
+
+.text-services {
+    color: #8862F3 !important;
+}
+
+.bg-services {
+    background-color: #8862F3 !important;
+}
+
+* {
+    box-sizing: border-box !important;
+    /* background-color: white !important; */
+}
+
+
+/* .nav-overflow {
+    max-height: 80vh !important;
+    overflow: auto !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+} */
