@@ -20,10 +20,13 @@ const Page = () => {
 
     // Upload Lead List
     const onSubmit = (data) => {
+        console.log(data);
         axiosPublic.post('/leadList', { ...data, uid: user?.uid })
             .then(res => {
-                console.log(res);
-                router.push('/leadlists');
+                if (res.data.insertedId) {
+                    console.log(res);
+                    router.push('/leadlists');
+                }
             })
             .catch(err => console.log(err.message));
     };
@@ -91,7 +94,7 @@ const Page = () => {
                             type="submit"
                             className="bg-primary text-white w-1/2 mx-auto btn rounded-[16px] poppins text-lg font-semibold h-[60px]"
                         >
-                            <Link href={'/lists'}>Make It</Link>
+                            <span>Make It</span>
                             <FaArrowRight />
                         </button>
                     </div>
